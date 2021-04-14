@@ -1,9 +1,14 @@
 建立Python虚拟环境
 因为CentOS 6/7自带的是Python2，而Yum等工具依赖原来的Python，为了不扰乱原来的环境我们来使用Python虚拟环境
+
 cd /opt/
+
 python3 -m venv py3
+
 source /opt/py3/bin/activate
+
 (py3) [root@jumpserver-server opt]#
+
 看到上面的提示符代表成功，以后都要先运行以上source命令，以下所有命令均在该虚拟环境中运行！
 
 自动载入 Python 虚拟环境配置
