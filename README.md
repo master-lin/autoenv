@@ -1,3 +1,26 @@
+建立Python虚拟环境
+因为CentOS 6/7自带的是Python2，而Yum等工具依赖原来的Python，为了不扰乱原来的环境我们来使用Python虚拟环境
+cd /opt/
+python3 -m venv py3
+source /opt/py3/bin/activate
+(py3) [root@jumpserver-server opt]#
+看到上面的提示符代表成功，以后都要先运行以上source命令，以下所有命令均在该虚拟环境中运行！
+
+自动载入 Python 虚拟环境配置
+此项仅为懒癌晚期的人员使用，防止运行 Jumpserver 时忘记载入 Python 虚拟环境导致程序无法运行。使用autoenv
+
+$ cd /opt
+$ git clone https://github.com/master-lin/autoenv.git
+$ echo 'source /opt/autoenv/activate.sh' >> ~/.bashrc
+$ source ~/.bashrc
+
+echo "source /opt/py3/bin/activate" > /opt/devops/.env
+
+以后进入到devops目录会自动切换到py3虚拟环境
+
+
+#############################################################################
+
 
 # Autoenv: Directory-based Environments [![Build Status](https://travis-ci.com/inishchith/autoenv.svg?branch=master)](https://travis-ci.com/inishchith/autoenv)
 
